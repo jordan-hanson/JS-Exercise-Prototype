@@ -8,6 +8,7 @@
 */
 // npm test
 // git test
+// task 1
 // EXAMPLE SOLUTION CODE:
 function Airplane(name) {
   this.name = name;
