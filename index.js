@@ -6,9 +6,8 @@
         + If a plane takes off, its `isFlying` property is set to true.
         + If a plane lands, its `isFlying` property is set to false.
 */
-// npm test
-// git test
-// task 1
+
+
 // EXAMPLE SOLUTION CODE:
 function Airplane(name) {
   this.name = name;
@@ -41,9 +40,15 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.personInfo = function () {
+    console.log(`Name: ${this.name} | and Age: ${this.age}`)
+  }
 }
+let josey = new Person("Josey", "10")
+console.log(josey)
 
 /*
   TASK 2
