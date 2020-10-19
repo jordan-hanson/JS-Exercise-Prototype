@@ -40,15 +40,23 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
+
 function Person(name, age) {
   this.name = name;
   this.age = age;
-  this.personInfo = function () {
-    console.log(`Name: ${this.name} | and Age: ${this.age}`)
+  this.stomach = [];
+}
+Person.prototype.eat = function (edible) {
+  if (this.stomach.length < 10) {
+    this.stomach.push(edible)
   }
 }
-let josey = new Person("Josey", "10")
-console.log(josey)
+Person.prototype.poop = function () {
+  this.stomach = [];
+}
+Person.prototype.toString = function () {
+  return `Name: ${this.name}, Age: ${this.age}`;
+}
 
 /*
   TASK 2
@@ -81,7 +89,7 @@ function Baby() {
 
 /* 
   TASK 4
-
+ 
   In your own words explain the four principles for the "this" keyword below:
   1. 
   2. 
