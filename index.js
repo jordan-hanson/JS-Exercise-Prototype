@@ -82,11 +82,15 @@ Car.prototype.fill = function (gallons) {
   this.tank = this.tank + gallons
 }
 Car.prototype.drive = function (distance) {
-  if (this.odometer = this.odometer + distance) {
-
-  }
-
+  this.odometer = this.odometer += distance;
+  // let milesTraveled = this.odometer - distance;
 }
+Car.prototype.empty = function (odometer) {
+  if (this.tank = 0) {
+    return `I ran out of fuel at ${odometer} miles!`
+  }
+}
+
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -102,10 +106,10 @@ function Baby() {
   TASK 4
  
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. .bind is binding with the global window
+  2. new makes a new object based upon the constructor and methods
+  3. call (calls that info that this can only use now. it over rides what was put in the constructor)
+  4. apply it is close to call not much difference ("Dave quoted")
 */
 
 
